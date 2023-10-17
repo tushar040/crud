@@ -1,0 +1,37 @@
+{%load static%}
+
+{% include 'projectheader.html' %}
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Category_Name</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">catimage</th>
+                                        <th scope="col">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                {% for item in cat %}
+                                    <tr>
+                                        <td>{{item.Category_Name}}</td>
+                                        <td>{{item.Description}}</td>
+                                        <td>{{item.catimage}}</td>
+                                        <td><a class="btn btn-primary" href="updatecat/{{item.id}}">Update</a><a class="btn btn-danger" href="deletecat/{{item.id}}">Delete</a></td>
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+{% include 'footer.html' %}
+

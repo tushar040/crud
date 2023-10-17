@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>student</title>
+</head>
+<body>
+
+  <form method="post" action="addstud" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset>
+          <legend>student</legend>
+          <p>
+              First name: <input type = "text" name = "f_name" />
+          </p>
+          <p>
+              Last name: <input type = "text" name = "l_name" />
+          </p>
+
+          <p>
+              Email: <input type = "email" name = "email" />
+          </p>
+
+          <p>
+              Password: <input type = "password" name = "password" />
+          </p>
+
+          <p>
+              Mobile:<input type="text" name="mobile"/>
+          </p>
+
+          <p>
+              <input type = "radio" name = "gender" value = "Male"> Male
+              <input type = "radio" name = "gender" value = "Female"> Female
+          </p>
+
+          <p>
+              <br>
+              <li><input type="checkbox" name="ride[]" value="Bike" />Bike</li>
+              <li><input type="checkbox" name="ride[]" value="Car" />Car</li>
+          </p>
+
+          <p>
+              <label for="city">Choose_color_name:</label>
+              <select name="color" id="city">
+                  <option value="red">red</option>
+                  <option value="green">green</option>
+
+              </select>
+
+          </p>
+
+          <p>
+              <input type = "file" name = "file">
+          </p>
+
+          <td>
+              <input type="submit" name="submit"/>
+          </td>
+
+
+      </fieldset>
+  </form>
+</body>
+</html>

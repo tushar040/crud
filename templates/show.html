@@ -1,0 +1,78 @@
+{% include "header.html" %}
+<!--<html>-->
+<!--<body>-->
+<!--<div data-bs-theme="dark">-->
+<!--  <button type="button" class="btn-close" aria-label="Close"></button>-->
+<!--  <button type="button" class="btn-close" disabled aria-label="Close"></button>-->
+<!--</div>-->
+<!--<table class="table">-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th scope="col">Task</th>-->
+<!--      <th scope="col">Status</th>-->
+<!--      <th scope="col">Action</th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--    {% for i in allTask %}-->
+
+<!--    <tr>-->
+
+<!--      <th scope="row">{{i.task}}</th>-->
+
+<!--      {% if i.status == "completed" %}-->
+<!--      <td><p class="bg bg-success">{{i.status}}</p></td>-->
+
+<!--      {% else %}-->
+<!--      <td><p class="bg bg-danger">{{i.status}}</p></td>-->
+<!--      {% endif %}-->
+
+
+
+
+<!--      <td><button class="btn btn-danger">Delete</button></td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+
+
+
+
+<!--{{title}}-->
+
+<!--{{data1}}-->
+
+
+<!--Hello i am in show-->
+
+
+
+<!--  </tbody>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Task</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {{context}}
+  {% for item in todos %}
+
+    <tr>
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.task}}</td>
+      <td>{{item.status}}</td>
+      <td><a class="btn btn-danger" href="delete/{{item.id}}">Delete</a></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>

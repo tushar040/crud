@@ -1,0 +1,38 @@
+
+{%load static%}
+
+
+{% include 'projectheader.html' %}
+
+
+            <!-- Form Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light rounded h-100 p-4">
+<!--                            <h6 class="mb-4">Basic Form</h6>-->
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputCategoryName" class="form-label">Category_Name</label>
+                                    <input type="text" class="form-control" name="Category_Name'">
+                                    </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputDescription" class="form-label">Description</label>
+                                    <input type="text" class="form-control" name="Description">
+                                    </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputImage" class="form-label">catimage</label>
+                                    <input type="file" name="catimage">
+                                    </div>
+
+
+                                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+
+            <!-- Form End -->
+
+
+            <!-- Footer Start -->
+{% include 'footer.html' %}

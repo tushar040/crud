@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Employee Details</title>
+</head>
+<body>
+
+  <form method="post" action="addemp">
+        {% csrf_token %}
+<!--        {{ form.as_p }}-->
+      <fieldset>
+          <legend>Employee Details</legend>
+          <p>
+              First name: <input type = "text" name = "f_name" />
+          </p>
+          <p>
+              Last name: <input type = "text" name = "l_name" />
+          </p>
+          <p>
+              <input type = "radio" name = "Gender" value = "Male"> Male
+              <input type = "radio" name = "Gender" value = "Female"> Female
+          </p>
+          <p>
+              <br>
+              <li><input type="checkbox" name="Ride[]" value="Bike" />Bike</li>
+              <li><input type="checkbox" name="Ride[]" value="Car" />Car</li>
+          </p>
+
+          <p>
+              Employee ID: <input type = "text" name = "Emp_ID" />
+          </p>
+
+          <p>
+              Designation: <input type = "text" name = "Des" />
+          </p>
+
+          <p>
+              Phone Number: <input type = "text" name = "phone" />
+          </p>
+
+          <td>
+
+              <input type="submit" name="submit"/>
+          </td>
+
+      </fieldset>
+  </form>
+</body>
+</html>

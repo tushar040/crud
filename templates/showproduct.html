@@ -1,0 +1,51 @@
+
+{%load static%}
+
+
+{% include 'projectheader.html' %}
+
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product_Name</th>
+                                        <th scope="col">Product_Description</th>
+                                        <th scope="col">Product_Price</th>
+                                        <th scope="col">Product_Quantity</th>
+                                        <th scope="col">Product_Image</th>
+                                        <th scope="col">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>maaza</td>
+                                        <td>seeks to bring families together</td>
+                                        <td>40</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td><a class="btn btn-danger">Delete</a></td>
+
+                                    </tr>
+                                    {{context}}
+                                    {% for item in products %}
+                                    <tr>
+                                        <th scope="row">{{item.Product_Name}}</th>
+                                        <td>{{item.Product_Description}}</td>
+                                        <td>{{item.Product_Price}}</td>
+                                        <td>{{item.Product_Quantity}}</td>
+                                        <td>{{item.Product_Image}}</td>
+                                        <td><a class="btn btn-danger" href="deletepro/{{item.id}}">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+{% include 'footer.html' %}

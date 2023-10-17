@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>studentform</title>
+</head>
+<body>
+
+  <form method="post" action="insertData" class="post-form" enctype="multipart/form-data" >
+      {% csrf_token %}
+      {{ form.as_p }}
+      <fieldset>
+          <legend>studentform</legend>
+          <p>
+              First name: <input type = "text" name = "f_name" />
+          </p>
+          <p>
+              Last name: <input type = "text" name = "l_name" />
+          </p>
+
+          <p>
+              Email: <input type = "email" name = "email" />
+          </p>
+
+          <td>
+              <input type="submit" class="save btn btn-default">
+          </td>
+
+
+      </fieldset>
+  </form>
+</body>
+</html>

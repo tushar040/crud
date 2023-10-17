@@ -1,0 +1,24 @@
+{% include "header.html" %}
+<html>
+<body>
+<div class="container">
+<form method="post" action="http://127.0.0.1:8000/create">
+    {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Task</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="task">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Status</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="status'">
+  </div>
+  <div class="mb-3 form-check">
+<!--    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+  </div>
+  <button type="submit" class="btn btn-warning">Submit</button>
+</form>
+    </div>
+</body>
+</html>
